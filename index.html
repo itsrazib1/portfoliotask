@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/7187222e78.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header">
@@ -31,15 +32,88 @@
     <div id="about">
         <div class="container">
             <div class="row">
-                <div class="about col 1">
+                <div class="about-col-1">
                     <img src="/img/user.png" alt="">
                 </div>
 
-                <div class="about col 2">
-                    <h1>About Me</h1>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic molestiae consequuntur animi beatae repellat eaque minima! Perspiciatis tenetur, exercitationem laboriosam deleniti explicabo neque nemo ab quisquam sed, dolore, enim eos eum ex dignissimos corporis</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links"onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links"onclick="opentab('educatation')">Educatation</p>
+                    </div>
+                    <div class="tab-container active-tab" id="skills">
+                        <ul>
+                            <li><span>UI?UX</span><br>Designing Web/App Interfaces</li>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>App Development</span><br>Designing Web/App Interfaces</li>
+                        </ul>
+                    </div>
+                    <div class="tab-container" id="experience">
+                        <ul>
+                            <li><span>2021-Current</span><br>MERN STACK DEVELOPER</li>
+                            <li><span>2021-2022</span><br>Fullstack Development</li>
+                            <li><span>2019-2021</span><br>React Developer</li>
+                        </ul>
+                    </div> 
+                    <div class="tab-container" id="educatation">
+                        <ul>
+                            <li><span>2022-2026</span><br>Studying BBA Honors</li>
+                            <li><span>2021</span><br>Complete HSC Dgree</li>
+                            <li><span>2019</span><br>Complete SSC Dgree</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- ---------------------service-------------------- -->
+    <div id="service">
+        <div class="container">
+            <h1 class="sub-title">My Service</h1>
+            <div class="service-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cupiditate, earum aliquam non sequi vitae.</p>
+                    <a href="">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cupiditate, earum aliquam non sequi vitae.</p>
+                    <a href="">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>APP Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cupiditate, earum aliquam non sequi vitae.</p>
+                    <a href="">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- ---------------------Portfolio------------------------ -->
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontainer = document.getElementsByClassName("tab-container");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontaine of tabcontainer){
+                tabcontaine.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+    
 </body>
 </html>
