@@ -115,105 +115,235 @@ nav ul li a:hover:after {
   list-style: none;
   margin: 10px 0;
 }
-.tab-container ul li span{
-    color: #00ffaa;
-    font-size: 14px;
+.tab-container ul li span {
+  color: #00ffaa;
+  font-size: 14px;
 }
-.tab-container{
-    display: none;
+.tab-container {
+  display: none;
 }
-.tab-container.active-tab{
-    display: block;
+.tab-container.active-tab {
+  display: block;
 }
 /* ----------------Service--------------- */
 
-#service{
-    padding: 30px 0;
+#service {
+  padding: 30px 0;
 }
-.service-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
 }
-.service-list div{
-    background: #262626;
-    padding: 40px;
-    font-size: 13px;
-    font-weight: 300;
-    border-right: 10px;
-    transition: background 0.5s,transform 0.5s;
+.service-list div {
+  background: #262626;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  border-right: 10px;
+  transition: background 0.5s, transform 0.5s;
 }
-.service-list div i{
-    font-size: 50px;
-    margin-bottom: 30px;
+.service-list div i {
+  font-size: 50px;
+  margin-bottom: 30px;
 }
-.service-list div h2{
-    font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 15px;
+.service-list div h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
 }
-.service-list div a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 12px;
-    margin-top: 20px;
-    display: inline-block;
+.service-list div a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  margin-top: 20px;
+  display: inline-block;
 }
-.service-list div:hover{
-    background: #12b27d;
-    transform: translateY(-10px);
+.service-list div:hover {
+  background: #12b27d;
+  transform: translateY(-10px);
 }
 /* ---------------------Portfolio------------------------ */
-#portfolio{
-    padding: 50px 0;
+#portfolio {
+  padding: 50px 0;
 }
-.work-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
 }
-.work{
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
+.work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
 }
-.work img{
-    width: 100%;
-    border-radius: 10px;
+.work img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #00ffaa);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s;
+}
+.layer h3 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.layer a {
+  margin-top: 20px;
+  color: #00ffaa;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  background: #ffff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+}
+.work:hover img {
+  transform: scale(1.1);
+}
+.work:hover .layer {
+  height: 100%;
+}
+.btn {
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  border: 1px solid #00ffaa;
+  padding: 14px 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.5s;
+}
+.btn:hover {
+  background: #00ffaa;
+}
+/* -------------------contact---------------------------- */
+.contact-left {
+  flex-basis: 35%;
+}
+.contact-right {
+  flex-basis: 60%;
+}
+.contact-left p {
+  margin-top: 30px;
+}
+.contact-left p i {
+  color: #00ffaa;
+  margin-right: 15px;
+  font-size: 25px;
+}
+.social-icon {
+  margin-top: 30px;
+}
+.social-icon a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: #ababab;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+.social-icon a:hover {
+  color: #00ffaa;
+  transform: translateY(-5px);
+}
+.btn.btn2 {
+  display: inline-block;
+  background: #00ffaa;
+}
+.contact-right form {
+  width: 100%;
+}
+form input,
+form textarea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #262626;
+  padding: 15px;
+  margin: 15px 0;
+  color: #ffff;
+  font-size: 18px;
+  border-radius: 6px;
+}
+form .btn2 {
+  padding: 14px 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.copyright {
+  width: 100%;
+  text-align: center;
+  padding: 25px 0;
+  background: #262626;
+  font-weight: 300;
+  margin-top: 20px;
+}
+.copyright i {
+  color: #00ffaa;
+}
+/* ---------------css for small deviece------- */
+
+nav .fa-solid{
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  #header {
+    background-image: url(/img/phone-background.png);
+  }
+  .header-text{
+    margin-top: 100%;
+    font-size: 16px;
+  }
+  .header-text h1{
+    font-size: 30px;
+  }
+  nav .fa-solid{
     display: block;
+    font-size: 25px;
 }
-.layer{
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0,0,0,0.6),#00ffaa);
-    border-radius: 10px;
+nav ul{
+    background: #00ffaa;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+}
+nav ul li{
+    display: block;
+    margin: 25px;
+}
+nav ul .fa-solid{
     position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
-    text-align: center;
-    font-size: 14px;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
 }
-.layer h3{
-    font-weight: 500;
-    margin-bottom: 20px;
-}
-.layer a{
-    margin-top: 20px;
-    color: #00ffaa;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 60px;
-    background: #ffff;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-align: center;
 }
